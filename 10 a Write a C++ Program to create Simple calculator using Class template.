@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+template<class A>
+class cal
+{
+	A X,Y;
+	public:
+		void get()
+		{
+			cin>>X>>Y;
+		}
+		A large()
+		{
+			if(X>Y)
+			return X;
+			else
+			return Y;
+		}
+		void display()
+		{
+			cout<<"X"<<"X";
+			cout<<"Y"<<"Y";
+			cout<<"grater number is:"<<large();
+		}
+};
+int main()
+{
+	cal<int>c;
+	cout<<"enter two integers:";
+	c.get();
+	c.display();
+	cal<float>f;
+	cout<<"\n enter two integer:";
+	f.get();
+	f.display();
+	return 0;
+}
