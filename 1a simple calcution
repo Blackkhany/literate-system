@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+int main(){
+    char opt;
+    int n1,n2,res;
+    cout<<"choose an operator(+,-,*,/)";cout<<"\nto perform the operation:";
+    cin>>opt;
+    if(opt== '/')
+    {
+     cout<<"you have selected:division";
+    }
+    else if(opt=='*')
+    {
+      cout<<"you have selected:mutiplication";   
+    }
+else if(opt=='+')
+    {
+      cout<<"you have selected:addition";   
+    }
+
+    else if(opt=='-')
+    {
+      cout<<"you have selected :subtraction";   
+    }
+cout<<"\n enter first number:";
+cin>>n1;
+cout<<"\n enter second number:";
+cin>>n2;
+switch(opt)
+{
+    case'+':
+    res=n1+n2;
+    cout<<"addition:"<<res;
+    break;
+    case'-':
+    res=n1-n2;
+    cout<<"subraction:"<<res;
+    break;
+    case'*':
+    res=n1*n2;
+    cout<<"multiplication:"<<res;
+    break;
+    case'/':
+    res=n1/n2;
+    cout<<"division:"<<res;
+    break;
+    if(n2==0)
+    {
+        cout<<"\n division cannot be zero.please enter another value";
+    
+    }
+    cin>>n2;
+    res=n1/n2;
+    cout<<"division :"<<res;
+    break;
+}
+    return 0;
+    
+}
+
+
+
+
