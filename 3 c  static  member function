@@ -1,0 +1,51 @@
+
+#include<iostream>
+
+#include<stdio.h>
+using namespace std;
+class student
+{
+	int roll_no;
+	char name[50];
+	float percent;
+	static int c;
+	public:
+		void get()
+		{
+			cout<<"\n enter name:";
+			cin>>name;
+			cout<<"\n enter percentage:";
+			cin>>percent;
+			roll_no=++c;
+		}
+		void show()
+		{
+			cout<<"\n roll no:"<<roll_no;
+			cout<<"\n name:"<<name;
+			cout<<"\n percentage:"<<percent;
+		}
+			static void show_count()
+		
+			{
+				cout<<"\n\n\n\t total number of student admitted:"<<c;
+			}
+		};
+		int student::c;
+		int main()
+		{
+			student s1,s2,s3;
+			s1.get();
+			s2.get();
+			s3.get();
+			cout<<"\n object 1 data";
+			cout<<"\n **************";
+			s1.show();
+			cout<<"\n object 2 data";
+			cout<<"\n **************";
+			s2.show();
+			cout<<"\n object 3 data";
+			cout<<"\n **************";
+			s3.show();
+			student::show_count();
+			return 0;
+}
