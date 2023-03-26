@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int sec,ss,mm,hh;
+	cout<<"enter seconds:";
+	cin>>sec;
+	hh=sec/3600;
+	mm =(sec-hh*3600)-55*60;
+	ss=(sec-hh*3600)/60;
+	
+	
+	cout<<"hours"<<hh;
+		cout<<"\nsecond"<<ss;
+			cout<<"\nminutes"<<mm;
+	return 0;
+}
