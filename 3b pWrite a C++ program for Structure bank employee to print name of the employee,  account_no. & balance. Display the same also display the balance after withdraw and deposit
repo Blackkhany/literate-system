@@ -1,0 +1,66 @@
+#include<iostream>
+using namespace std;
+struct bank
+{
+	char name[30];
+	int acc_no;
+	float balance;
+	public:
+		void get()
+		{
+			cout<<"enter name:";
+			cin>>name;
+			cout<<"enter account no:";
+			cin>>acc_no;
+			cout<<"enter balance:";
+			cin>>balance;
+		}
+		void display()
+		{
+			cout<<"\n name:"<<name;
+			cout<<"\n account no:"<<acc_no;
+			cout<<"\n balance:"<<balance;
+		}
+		void deposite()
+		{
+			cout<<"enter amount to be deposited:";
+			int amt;
+			cin>>amt;
+			balance=balance+amt;
+		}
+		void withdraw(int wid)
+		{
+			int amt;
+			amt=balance-wid;
+			if(amt<500)
+			cout<<"\nwithdraw not possible!!!minimum should be maintained!!!";
+			else
+			balance= balance-wid;
+		}
+};
+int main()
+{
+	bank b;
+	b.get();
+	cout<<"\n initial details of the amount \n";
+	b.display();
+	cout<<"\n 1:deposite";
+	cout<<"\n 2:withdrawal";
+	cout<<"\n 2:exit";
+	cout<<"\n enter your choise:";
+	int ch;
+	cin>>ch;
+	if(ch==1)
+	{
+		b.deposite();
+		cout<<"\n after deposite : details of the amount \n";
+		b.display();
+	}
+	if(ch==2)
+	{
+		b.withdraw(100);
+		cout<<"/n after withdrawal: details of the account /n";
+		b.display();
+	}
+	return 0;
+}
