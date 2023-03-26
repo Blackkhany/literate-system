@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,n,sum=0,sum1=0;
+	cout<<"enter number:";
+	cin>>n;
+for(i=1;i<=n;i++)	
+	{
+	    if(i%2==1)
+	    {
+	        sum=sum+i;
+	    }
+	}
+	cout<<"sum of all even number between given number is:"<<sum;
+	
+	{
+	    if(i%2==1)
+	{
+	sum1=sum1+i;
+	}}
+	cout<<"\n sun of all odd number between given number :"<<sum1;
+	return 0;
+}
