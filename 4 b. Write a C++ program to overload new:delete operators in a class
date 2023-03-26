@@ -1,0 +1,70 @@
+#include<iostream>
+using namespace std;
+class p_marks
+{
+	protected:
+	int v,p;
+	public:
+	void accept_p()
+	{
+		cout<<"enter viva marks:";
+		cin>>v;
+		cout<<"enter practical marks:";
+		cin>>p;
+}
+void show_p()
+{
+	cout<<"\nviva marks:"<<v;
+	cout<<"\npractical marks:"<<p;
+}
+};
+class t_marks
+{
+	protected:
+		int total;
+		float per;
+		public:
+			void accept_t()
+			{
+				cout<<"\nenter total marks:";
+				cin>>total;
+				cout<<"\nenter percentage:";
+				cin>>per;
+			}
+			void show_t()
+			{
+				cout<<"\ntotal marks:"<<total;
+				cout<<"\npercentage:"<<per;
+			}
+};
+class student:public p_marks,public t_marks
+{
+string name;
+int rno;
+public:
+void accept()
+{
+	cout<<"\nenter name:";
+	cin>>name;
+	cout<<"\nenter roll no:";
+	cin>>rno;
+}
+void show()
+{
+	cout<<"\nName="<<name;
+	cout<<"\nRoll No="<<rno;
+}
+};
+int main()
+{
+	student s1;
+	s1.accept_p();
+	s1.show_p();
+	s1.accept_t();
+	s1.show_t();
+	s1.accept();
+	s1.show();
+	return 0;
+}
+
+
