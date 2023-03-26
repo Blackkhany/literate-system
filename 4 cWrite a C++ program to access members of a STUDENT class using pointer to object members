@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class student
+{
+	
+		char name[30];
+		int age;
+	public:
+		void get()
+		{
+		cout<<"\nenter name:=";
+		cin>>name;
+		cout<<"\nenter age:=";
+		cin>>age;
+		}
+		void show(){
+		    cout<<"\nname:"<<name;
+		    cout<<"\nage:"<<age;
+		}
+};
+int main()
+{
+	student s;
+	student*ptr;
+	s.get();
+	ptr=&s;
+	ptr->show();
+	return 0;
+}
