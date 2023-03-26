@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class person
+{
+	private:
+		char name[30];
+		int age;
+		public:
+			person();
+			person(char*n,int a);
+			void read();
+			void show();
+			person elder (person p);
+};
+person::person()
+{
+	name[0]='10';
+	age=0;
+}
+person::person (char*n,int a)
+{
+	strcpy(name,n);
+	age=a;
+}
+void person::read()
+{
+	cout<<"enter name and age:";
+	cin>>name>>age;
+}
+void person::show()
+{
+	cout<<"name:"<<name<<"age:"<<age;
+}
+person person::elder(person p)
+{
+	if (age>p.age)
+	return (*this);
+	else
+	return (p);
+}
+int main()
+{
+	person p1,p2;
+	
+	p1.read();
+	p2.read();
+	person p3;
+	p3=p1.elder(p2);
+	p3.show();
+	return 0;
+}
