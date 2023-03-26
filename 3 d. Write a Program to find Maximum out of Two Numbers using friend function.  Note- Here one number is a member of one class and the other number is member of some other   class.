@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class B;
+class A
+{
+	int x;
+	public:
+		void setdata(int i)
+		{
+			x=1;
+		}
+		friend void max (A a, B b);
+};
+class B
+{
+	int y;
+	public:
+		void setdata(int i)
+		{
+			y=1;
+		}
+		friend void max(A a,B b);
+};
+void max(A a,B b)
+{
+	if(a.x>=b.y)
+	cout<<"x is greater";
+	else
+	cout<<"y is greater";
+}
+int main()
+{
+	A a;
+	B b;
+	int n1,n2;
+	cout<<"\n enter n1:";
+	cin>>n1;
+	cout<<"\n enter n2:";
+	cin>>n2;
+	a.setdata(10);
+	b.setdata(5);
+	max(a,b);
+	return 0;
+}
