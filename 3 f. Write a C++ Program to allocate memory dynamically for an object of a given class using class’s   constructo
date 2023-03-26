@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class example
+{
+	int num1;
+	int num2;
+	int*ptr;
+	public:
+		example()
+		{
+			num1=0;
+			num2=0;
+			ptr=new int;
+		}
+		example (int x,int y,int z)
+		{
+			num1=x;
+			ptr=new int;
+			*ptr=z;
+		}
+		void display()
+		{
+			cout<<""<<num1<<""<<num2<<""<<*ptr;
+		}
+};
+int main()
+{
+	example obj1;
+	example obj2(20,50,1);
+	obj1.display();
+	cout<< endl;
+	obj2.display();
+	return 0;
+}
