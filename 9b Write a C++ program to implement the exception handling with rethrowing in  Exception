@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+void multicatch(int n)
+{
+	try
+	{
+		if (n/2==0)
+		throw 1;
+	}
+	catch (int)
+	{
+		cout<<endl<<"\n number is divisible by 2";
+		throw;
+	}
+};
+int main()
+{
+	int x;
+	cout<<"enter x:";
+	cin>>x;
+	try
+	{
+		multicatch (x);
+	}
+	catch(int)
+	{
+		cout<<endl<<"exception rethrow";
+		cout<<endl<<"remainder is zero";
+	}
+	return 0;
+}
