@@ -1,0 +1,48 @@
+#include<iostream>
+
+
+
+using namespace std;
+class cal
+{
+    int x,y;
+    public:
+    void get()
+    {
+        cout<<"\nEnter two numbers:";
+        cin>>x>>y;
+    }
+    int sum()
+    {
+        return x+y;
+    }
+        int sub()
+    {
+        return x-y;
+    }
+    int mul()
+    {
+        return x*y;
+    }
+    int div()
+    {
+        return x/y;
+    }
+    void display()
+    {
+        cout<<"\n X="<<"\t Y="<<y;
+        cout<<"\n********\n";
+        cout<<"\n" << x << " + "<< y<< " = "<<sum();
+        cout<<"\n" << x << " - "<< y<< " = "<<sub();
+        cout<<"\n" << x << " * "<< y<< " = "<<mul();
+        cout<<"\n" << x << " / "<< y<< " = "<<div();
+    }
+};
+int main()
+{
+
+cal c;
+c.get();
+c.display();
+return 0;
+}
